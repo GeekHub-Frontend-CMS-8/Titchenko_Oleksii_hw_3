@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="RU_ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Изучаем формы</title>
+        <style>
+            ul {
+                margin-left: 0; /* Отступ слева в браузере IE и Opera */
+                padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+            }
+            li {
+                list-style-type: none;
+            }
+            #name {
+                margin-bottom: 10px; 
+            }
+            #surname {
+                margin-bottom: 10px;
+            }
+            #gendre {
+                margin-bottom: 20px;
+            }
+            #name2 {
+                margin-bottom: 20px;   
+            }
+            li.weekend {
+                margin-bottom: 10px; 
+                font-weight: bold;
+                margin-top: 10px;
+            }
+            .myInput { width:200px;
+                       height:10px;
+            }
+            .bold {
+                font-weight: bold;
+            }
+                        
+            #first_table {
+                margin: auto;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            #second_table {
+                margin: auto;
+                width: 60%;
+                margin-bottom: 20px;
+            }
+            #three_table { 
+                border-collapse: collapse;
+                margin: auto;
+                width: 60%;                
+            }
+            th, td {
+                border: 1px solid black;
+            } <!--применено ко всем ячейкам 3х таблиц-->
+        </style>
+    </head>
+    
+    <body>
+        <h2>Раскажите немного о себе...</h2>
+        
+        <form action="*.php" name="myform" method="post">
+            
+            <fieldset>
+                <legend class="bold">Коротко о себе:</legend>
+                <ul>
+                    <li>
+                        <label><span>Имя:</span>
+                            <input type="text" name="name" id="name" placeholder="Введите имя " required autofocus>
+                        </label>
+                    </li>    
+                    <li>
+                        <label><span>Фамилия:</span>
+                            <input type="text" name="surname" id="surname" placeholder="Введите фамилию">
+                        </label>
+                    </li>    
+                    <li>
+                        <label><span>Пол:</span>
+                            <input type="radio" name="gendre" id="gendre" value="male" checked> Мужской
+                    </label>
+                    <label>
+                        <input type="radio" name="gendre" value="famale">Женский 
+                    </label>
+                    </li>    
+                    <li>
+                        <label><span>Возраст:</span>
+                            <input type="" name="">лет
+                    </label>
+                    </li>    
+                </ul>
+            </fieldset> 
+            
+            <fieldset>
+                <legend class="bold">Подробнее о себе</legend>
+                 <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="gendre" value="male"> Мудрый 
+                        </label>
+                    </li>     
+                 <li>
+                     <label>
+                        <input type="radio" name="gendre" value="famale">Опытный
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="text" name="name_2"  placeholder="Введите дату "><span>Дата рождения</span>
+                    </label> 
+                </li>
+                <li>     
+                    <label>
+                        <input type="text" name="name_2"  placeholder=""><span>Семейное положение</span>
+                    </label>
+                </li>
+                <li>     
+                     <label>
+                        <input type="text" name="name_2" id="name_2" placeholder="Рабочий, служащий, колхозник"><span>Социальный статус</span>
+                    </label>
+                </li>
+                <li> 
+                    <label>
+                        <input type="text" name="name2" id="name2" placeholder="Город"><span>Местожительство</span>
+                    </label>
+                </li>
+                
+                <li class="weekend">Что вы обычно делаете на выходных?</li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="weekend" value="">Сплю
+                        </label>
+                    </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="weekend" value="">Гуляю с друзьями
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="weekend" value="" checked>Занимаюсь спортом
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input class="weekend" type="checkbox" name="weekend" value="">Хожу в гости к маме
+                    </label>
+                </li>
+                <li class="weekend">Рассказ о формах в книге посвященной</li>
+                <li>
+                    <label>
+                        <select name="type">
+                        <option type="name">Site frequency</option>
+                        <option type="name">Рассказ</option>
+                        <option type="name">Третий рассказ </option>
+                        </select>
+                    </label>
+                </li>
+                <li class="weekend">Сколько книг вы прочитали за свою жизнь:
+                
+                    <li>
+                        <label>
+                            <input type="radio" name="gendre" value="male">0-10 
+                        </label>
+                    </li>     
+                 <li>
+                     <label>
+                        <input type="radio" name="gendre" value="famale">11-20
+                    </label>
+                </li><li>
+                        <label>
+                            <input type="radio" name="gendre" value="male">21-50
+                        </label>
+                    </li>     
+                 <li>
+                     <label>
+                        <input type="radio" name="gendre" value="famale">50+
+                    </label>
+                </li>
+                   
+                <li class="weekend">Ваши коментарии:</li>
+                <li>   
+                     <textarea name="commit" cols=50 rows="10"></textarea>  
+                </li>
+                
+                <li>
+                    <label>
+                        <select name="type" multiple>
+                        <option type="name">Первая позиция</option>
+                        <option type="name">Вторая позиция</option>
+                        <option type="name">Длинное название позиции</option>
+                            <!--лишняя пустая строка выбора-->
+                        </select>    
+                    </label>
+                </li>
+              </ul>     
+            </fieldset>
+            
+            <fieldset>
+                    <legend class="bold">И в заключение:</legend>
+                <ul>
+                <li>
+                    <label>
+                        <input type="text" name="surname"  placeholder="Это поле было введено до вас" class='myInput'> 
+                    </label>
+                </li>
+                    <li class="weekend">Email:</li><!--найти как приземлить, хотя можно классом-->
+                        <label>
+                            <input type="text" name="email_name" class='myInput'>
+                        </label>
+                
+                <li class="weekend">Хотите подписаться на самую модную рассылку спама?</li>
+                <li class="weekend">Выберите категории</li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam" value="">Оборудование
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam" value="">Как стать милионером
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam" value="">Секреты успешных людей
+                    </label>
+                </li>
+                <li class="weekend">На сколько сложная задача?</li>
+                 <li>
+                    <label>
+                        <input type="radio" name="work" value="????">Надо больше времени 
+                    </label>
+                 </li>     
+                 <li>
+                     <label>
+                        <input type="radio" name="work" value="">Элементарно
+                    </label>
+                </li>
+                <li>
+                     <label>
+                        <input type="radio" name="work" value="">Волюнтаризм 
+                    </label>
+                </li>
+                <li>
+                     <label>
+                        <input type="radio" name="work" value="">Еле справились
+                    </label>
+                </li>
+                </ul>    
+             </fieldset>
+     
+            <label>
+                    <input type="submit" id="submit" value="Отправить анкету">
+                    <input type="reset" value="Очистить">
+            </label>
+        </form>
+        <br>
+         <!--Tables-->
+        <table id="first_table" border="1px">
+            <thead>
+                <tr>
+                    <th>Об'ект обробки</th>
+                    <th>Норма витрати препарату, мл/10л</th>
+                    <th>Норма витрати препарату, л/сотку</th>
+                    <th>Шкiдливi об'екти</th>
+                </tr>
+            <thead>    
+            <tbody>
+                <tr>
+                    <td>Картопля</td>
+                    <td>60-80</td>
+                    <td>до 5 л.</td>
+                    <td>Однорочнi двохрiчнi та злаковi бур'яни</td>
+                </tr>    
+                <tr>
+                    <td>Морква</td>
+                    <td>30-40</td>
+                    <td>до 5 л.</td>
+                    <td>Однорочнi двохрiчнi та злаковi бур'яни</td>
+                </tr>
+            </tbody>    
+        </table>
+        
+        <table id="second_table" border="1px" >
+            
+            <thead>
+            <tr>    
+                <th>Культура</th>
+                <th>Бур'яни</th>
+                <th>Норма витрати препарату, л/га</th>
+                <th>Строки обробки</th>
+            </tr>    
+            </thead>
+            <tr>
+                <th>Рiпак</th>
+                <td>однорiчнi</td>
+                <td>2-3</td>
+                <td>1 обробка в фазi 2-4 листкiв у бур'янiв. При висотi бур'янiв 10-15 см</td>
+            </tr>
+            <tr>
+                <th>Томати</th>
+                <td rowspan="2">однорiнi та багаторiчнi</td>
+                <td>1-2 2-3</td>
+                <td rowspan="3">1 обробка в фазi 1-2 листкiв культури, висота бур'янiв 10-15 см</td>
+            </tr>
+            <tr>
+                <th>Огiрки</th>
+                <td>2-3</td> 
+            </tr>
+            <tr>
+                <th>Коноплi</th>
+                <td>однорiчнi</td>
+                <td>1,5</td>
+            </tr>
+        </table>
+        
+        <table id="three_table">
+            <tr>
+                <th>Культура</th>
+                <th>Cпектр дii</th>
+                <th>Норма витрати</th>
+            </tr>
+            <tr>
+                <td>Буряки (столовi, цукровi, кормовi); морква, соняшник, картопля, капуста, цибуля, рiпак, баклажани, гарбузи, горох, динi, огiрки, перець, петрушка, селера, спаржа, томати, плодовi культури (вишня, груша, персик, слива, яблуня), ягiднi культури (суниця, смородина)</td>
+                <td>Гумай куряче просо, види мишiю, види пальчатки, види вiвсюга, метлюг звичайний, лисохвiст польовий, просо волосовидне</td>
+                <td>0,8-2 л/га</td>
+            </tr>
+            <tr>
+                <td>Однорiчнi та деякi , багаторiчнi дводольнI в т.ч. стiйкi до 2,4-Д (пiдмаренник чiпкий, берiзка польова, зiрочник середнiй та iн.) </td>
+                <td>Пшениця озима</td>
+                <td>7,5-10</td>
+            </tr>
+            <tr>
+                <td>Поля, призначенi для посiву озимих, овочевих, баштанних культур, цукрових бурякiв, кукурудзи, багаторiчних трав. Пари, несiльськогосподарськi угiддя та iн.</td>
+                <td>Багаторiчнi дводольнi (осоти, ромашки, молочаi, кульбаба та iн.)</td>
+                <td>30</td>
+            </tr>
+        </table>
+    </body>
+</html>
